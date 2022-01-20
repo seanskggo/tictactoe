@@ -26,25 +26,27 @@ const HomeScreen = (navigation) => {
   return (
     <View style={styles.main_container}>
       <Home_background />
-      <View style={styles.logo}>
-        <Image source={require('../assets/main.png')} style={styles.image} resizeMethod={'resize'} />
-      </View>
-      <View style={styles.buttons}>
-        <Pressable style={styles.button_style} onPress={() => navigation.navigate('Game_ai')}
-          android_ripple={{ color: '#7a919e' }}
-        >
-          <Text style={styles.text}>Player vs AI</Text>
-        </Pressable>
-        <Pressable style={styles.button_style} onPress={() => navigation.navigate('Game')}
-          android_ripple={{ color: '#7a919e' }}
-        >
-          <Text style={styles.text}>Player vs Player</Text>
-        </Pressable>
-        <Pressable style={styles.button_style} onPress={() => navigation.navigate('Instructions')}
-          android_ripple={{ color: '#7a919e' }}
-        >
-          <Text style={styles.text}>How To Play</Text>
-        </Pressable>
+      <View style={styles.sub_container}>
+        <View style={styles.logo}>
+          <Image source={require('../assets/main.png')} style={styles.image} resizeMethod={'resize'} />
+        </View>
+        <View style={styles.buttons}>
+          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Game_ai')}
+            android_ripple={{ color: '#7a919e' }}
+          >
+            <Text style={styles.text}>Player vs AI</Text>
+          </Pressable>
+          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Game')}
+            android_ripple={{ color: '#7a919e' }}
+          >
+            <Text style={styles.text}>Player vs Player</Text>
+          </Pressable>
+          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Instructions')}
+            android_ripple={{ color: '#7a919e' }}
+          >
+            <Text style={styles.text}>How To Play</Text>
+          </Pressable>
+        </View>
       </View>
     </View>
   );
@@ -61,26 +63,29 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  logo: {
+  sub_container: {
     position: 'absolute',
+    justifyContent: 'center',
+    alignItems: 'center'
+  },
+  logo: {
     alignItems: 'center',
-    width: width * 0.5,
+    width: 200,
     aspectRatio: 1,
-    top: (height - width)/4,
+    marginBottom: 35
   },
   buttons: {
-    position: 'absolute',
     alignItems: 'center',
-    top: height * 0.5,
   },
   button_style: {
-    borderRadius: 8,
-    width: width * 0.4,
-    height: width * 0.12,
+    borderRadius: 15,
+    width: 180,
+    height: 50,
     backgroundColor: 'rgba(66, 153, 240, 0.7)',
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 25,
+    marginBottom: 5
   },
   image: {
     flex: 1,
@@ -88,7 +93,7 @@ const styles = StyleSheet.create({
   },
   text: {
     color: 'white',
-    fontSize: (width * 0.12) * 0.36,
+    fontSize: 20,
   }
 })
 
