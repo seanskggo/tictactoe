@@ -12,6 +12,7 @@ import React, { useState, useEffect } from 'react';
 import { View, StyleSheet, Image, Pressable, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import { Game_background } from './Svg_renderer';
+import { cross, circle } from '../constants/Images';
 import Show_modal from './Modal';
 import Check_state from './Check_state';
 import Minimax from './Minimax';
@@ -29,9 +30,6 @@ const grid = [
 ];
 // Screen dimensions
 const button_dimension = Dimensions.get('window').width * 0.23;
-// Load PNG files 
-const circle = require('../assets/circle.png');
-const cross = require('../assets/cross.png');
 // Keep track of turn
 var turn = true;
 var game_over = false;

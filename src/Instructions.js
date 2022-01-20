@@ -10,12 +10,12 @@
 import React from 'react';
 import { View, Image, StyleSheet, Dimensions } from 'react-native';
 import { Instruction_background } from './Svg_renderer';
+import { rules } from '../constants/Images';
 
 /////////////////////////////////////////////////////////////////////////////////
 // Globals
 /////////////////////////////////////////////////////////////////////////////////
 
-const rules = require('../assets/rules.png');
 const width = Dimensions.get('window').width;
 const height = Dimensions.get('window').height;
 
