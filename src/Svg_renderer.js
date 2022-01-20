@@ -21,8 +21,6 @@ import Instruction from '../svg/Instruction_background';
 const Game_background = (props) => {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
       preserveAspectRatio="none"
       viewBox="0 0 810 1440"
       {...props}
@@ -46,8 +44,6 @@ const Game_background = (props) => {
 const Home_background = (props) => {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
       preserveAspectRatio="none"
       viewBox="0 0 810 1440"
       {...props}
@@ -71,8 +67,6 @@ const Home_background = (props) => {
 const Instruction_background = (props) => {
   return (
     <Svg
-      xmlns="http://www.w3.org/2000/svg"
-      xmlnsXlink="http://www.w3.org/1999/xlink"
       preserveAspectRatio="none"
       viewBox="0 0 810 1440"
       {...props}
