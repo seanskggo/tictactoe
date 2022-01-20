@@ -49,6 +49,7 @@ const Stack = createStackNavigator();
 
 // Rendering windows
 export default App = () => {
+  
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerTransparent: true, headerTintColor: 'blue' }}>
