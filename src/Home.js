@@ -78,13 +78,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   button_style: {
-    borderRadius: 15,
+    borderRadius: 30,
     width: 180,
     height: 50,
     backgroundColor: 'rgba(66, 153, 240, 0.7)',
     justifyContent: 'center',
     alignItems: 'center',
-    elevation: 25,
     marginBottom: 5
   },
   image: {
