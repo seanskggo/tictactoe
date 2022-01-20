@@ -100,12 +100,10 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 50,
-    color: 'white',
-    fontFamily: 'sans-serif-thin',
+    color: 'white'
   },
   button_text: {
-    color: 'white',
-    fontFamily: 'sans-serif-thin',
+    color: 'white'
   }
 });
 

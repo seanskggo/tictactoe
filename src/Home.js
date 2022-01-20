@@ -89,7 +89,6 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     fontSize: (width * 0.12) * 0.36,
-    fontFamily: 'sans-serif-thin'
   }
 })
 
