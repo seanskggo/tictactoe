@@ -20,6 +20,7 @@ import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import { rules, circle, cross } from './constants/Images';
 import Onboarding from './src/Onboarding';
+import { setTestDeviceIDAsync } from 'expo-ads-admob';
 
 /////////////////////////////////////////////////////////////////////////////////
 // Functions
@@ -53,6 +54,7 @@ const Stack = createStackNavigator();
 /////////////////////////////////////////////////////////////////////////////////
 
 const _cacheResourcesAsync = async () => {
+  await setTestDeviceIDAsync('EMULATOR')
   const images = [rules, circle, cross]
   const cacheImages = images.map(image => {
     return Asset.fromModule(image).downloadAsync();
