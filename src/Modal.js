@@ -89,21 +89,24 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
-    height: height * 0.05,
-    width: width * 0.35,
+    height: 45,
+    width: width * 0.25 + 30,
+    marginLeft: 10,
+    marginRight: 10
   },
   button: {
     alignItems: "center",
     justifyContent: 'center',
-    height: height * 0.05,
-    width: width * 0.35,
   },
   title: {
     fontSize: 50,
-    color: 'white'
+    color: 'white',
+    fontFamily: 'hyope'
   },
   button_text: {
-    color: 'white'
+    color: 'white',
+    fontFamily: 'hyope',
+    fontSize: 20,
   }
 });
 
