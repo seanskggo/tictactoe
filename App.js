@@ -77,12 +77,12 @@ export default App = () => {
   } else if (fontsLoaded) {
     return (
       <NavigationContainer>
-        <Stack.Navigator screenOptions={{ headerTransparent: true, headerTintColor: 'blue' }}>
-          <Stack.Screen name="Onboarding" component={Onboarding} options={{ title: '' }} />
-          <Stack.Screen name="Home" component={Home} options={{ title: '' }} />
-          <Stack.Screen name="Game" component={Game} options={{ title: '' }} />
-          <Stack.Screen name="Game_ai" component={Game_ai} options={{ title: '' }} />
-          <Stack.Screen name="Instructions" component={Instructions} options={{ title: '' }} />
+        <Stack.Navigator screenOptions={{ headerShown: false }}>
+          <Stack.Screen name="Onboarding" component={Onboarding} />
+          <Stack.Screen name="Home" component={Home} />
+          <Stack.Screen name="Game" component={Game} />
+          <Stack.Screen name="Game_ai" component={Game_ai} />
+          <Stack.Screen name="Instructions" component={Instructions} />
         </Stack.Navigator>
       </NavigationContainer >
     )
