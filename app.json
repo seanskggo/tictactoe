@@ -32,7 +32,7 @@
       "config": {
         "googleMobileAdsAppId": "ca-app-pub-4931537465151831~8942202829"
       },
-      "versionCode": 1,
+      "versionCode": 2,
       "permissions": [],
       "package": "com.hyope.tictactoeai"
     }
