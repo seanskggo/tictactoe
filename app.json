@@ -25,7 +25,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "versionCode": 1,
-      "package": "dev.quikk.tictactoeai"
+      "package": "com.hyope.tictactoeai"
     },
     "web": {
       "favicon": "./assets/favicon.png"
