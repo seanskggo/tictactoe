@@ -27,6 +27,7 @@
         "backgroundColor": "#FFFFFF"
       },
       "versionCode": 1,
+      "permissions": [],
       "package": "com.hyope.tictactoeai"
     },
     "web": {
