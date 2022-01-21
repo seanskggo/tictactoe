@@ -52,7 +52,7 @@ const Stack = createStackNavigator();
 // Rendering windows
 export default App = () => {
   let [fontsLoaded] = useFonts({
-    'font': require('./assets/fonts/font.ttf'),
+    'hyope': require('./assets/fonts/hyope.ttf'),
   });
   if (!fontsLoaded) {
     return <AppLoading />;

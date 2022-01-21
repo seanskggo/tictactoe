@@ -73,7 +73,7 @@ const styles = StyleSheet.create({
   },
   button_style: {
     borderRadius: 30,
-    width: 180,
+    width: 200,
     height: 50,
     backgroundColor: 'rgba(66, 153, 240, 0.7)',
     justifyContent: 'center',
@@ -87,6 +87,7 @@ const styles = StyleSheet.create({
   text: {
     color: 'white',
     fontSize: 20,
+    fontFamily: 'hyope'
   }
 })
 
