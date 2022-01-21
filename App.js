@@ -15,6 +15,8 @@ import HomeScreen from './src/Home';
 import InstructionsScreen from './src/Instructions';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import AppLoading from 'expo-app-loading';
+import { useFonts } from 'expo-font';
 
 /////////////////////////////////////////////////////////////////////////////////
 // Functions
@@ -49,15 +51,22 @@ const Stack = createStackNavigator();
 
 // Rendering windows
 export default App = () => {
-  
-  return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerTransparent: true, headerTintColor: 'blue' }}>
-        <Stack.Screen name="Home" component={Home} options={{ title: '' }} />
-        <Stack.Screen name="Game" component={Game} options={{ title: '' }} />
-        <Stack.Screen name="Game_ai" component={Game_ai} options={{ title: '' }} />
-        <Stack.Screen name="Instructions" component={Instructions} options={{ title: '' }} />
-      </Stack.Navigator>
-    </NavigationContainer >
-  )
+  let [fontsLoaded] = useFonts({
+    'font': require('./assets/fonts/font.ttf'),
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  } else {
+    return (
+      <NavigationContainer>
+        <Stack.Navigator screenOptions={{ headerTransparent: true, headerTintColor: 'blue' }}>
+          <Stack.Screen name="Home" component={Home} options={{ title: '' }} />
+          <Stack.Screen name="Game" component={Game} options={{ title: '' }} />
+          <Stack.Screen name="Game_ai" component={Game_ai} options={{ title: '' }} />
+          <Stack.Screen name="Instructions" component={Instructions} options={{ title: '' }} />
+        </Stack.Navigator>
+      </NavigationContainer >
+    )
+
+  }
 }

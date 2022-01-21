@@ -31,19 +31,13 @@ const HomeScreen = (navigation) => {
           <Image source={require('../assets/main.png')} style={styles.image} resizeMethod={'resize'} />
         </View>
         <View style={styles.buttons}>
-          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Game_ai')}
-            android_ripple={{ color: '#7a919e' }}
-          >
+          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Game_ai')}>
             <Text style={styles.text}>Player vs AI</Text>
           </Pressable>
-          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Game')}
-            android_ripple={{ color: '#7a919e' }}
-          >
+          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Game')}>
             <Text style={styles.text}>Player vs Player</Text>
           </Pressable>
-          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Instructions')}
-            android_ripple={{ color: '#7a919e' }}
-          >
+          <Pressable style={styles.button_style} onPress={() => navigation.navigate('Instructions')}>
             <Text style={styles.text}>How To Play</Text>
           </Pressable>
         </View>
