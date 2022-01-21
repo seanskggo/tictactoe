@@ -48,7 +48,7 @@ const Show_modal = (show, set_modal, reset_grid, { navigation }, winner) => {
             {button_info.map((ele, index) => {
               return (
                 <LinearGradient
-                  colors={['#b0b0b0', '#9c9898', '#808080']} style={styles.gradient}
+                  colors={['#b0b0b0', '#9c9898', '#808080']} style={styles.button}
                   start={{ x: 0.0, y: 0.25 }} end={{ x: 0.5, y: 1.0 }} key={index}
                 >
                   <Pressable style={styles.button} onPress={() => {
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'flex-end',
   },
-  gradient: {
+  button: {
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 8,
@@ -95,10 +95,6 @@ const styles = StyleSheet.create({
     width: width * 0.25 + 30,
     marginLeft: 10,
     marginRight: 10
-  },
-  button: {
-    alignItems: "center",
-    justifyContent: 'center',
   },
   title: {
     fontSize: 50,
