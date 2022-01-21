@@ -8,11 +8,8 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 import { isDevice } from 'expo-device';
-import { Platform, Text, View } from 'react-native';
-import {
-    AdMobBanner,
-    setTestDeviceIDAsync,
-} from 'expo-ads-admob';
+import { Platform, StyleSheet, View } from 'react-native';
+import { AdMobBanner } from 'expo-ads-admob';
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants
@@ -20,11 +17,11 @@ import {
 
 // DO NOT CHANGE THE CONSTANT BELOW
 const adUnitID = isDevice && !__DEV__ ? Platform.select({
-    ios: 'random-placeholder-ios-admob-id',
-    android: 'random-placeholder-android-admob-id',
+  ios: 'random-placeholder-ios-admob-id',
+  android: 'random-placeholder-android-admob-id',
 }) : Platform.select({
-    ios: 'ca-app-pub-3940256099942544/4411468910',
-    android: 'ca-app-pub-3940256099942544/1033173712',
+  ios: 'ca-app-pub-3940256099942544/2934735716',
+  android: 'ca-app-pub-3940256099942544/6300978111'
 });
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -32,10 +29,32 @@ const adUnitID = isDevice && !__DEV__ ? Platform.select({
 /////////////////////////////////////////////////////////////////////////////////
 
 const AdDisplay = () => {
-    return (
-        <Text>{adUnitID}</Text>
-    )
+  return (
+    <View style={styles.ad}>
+      <AdMobBanner
+        bannerSize="mediumRectangle"
+        adUnitID={adUnitID}
+        servePersonalizedAds
+        onDidFailToReceiveAdWithError={() => { }}
+      />
+    </View>
+  )
 }
+
+/////////////////////////////////////////////////////////////////////////////////
+// Style
+/////////////////////////////////////////////////////////////////////////////////
+
+const styles = StyleSheet.create({
+  ad: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: 'white',
+    borderRadius: 30,
+    height: 300,
+    width: 300
+  }
+});
 
 /////////////////////////////////////////////////////////////////////////////////
 // Exports

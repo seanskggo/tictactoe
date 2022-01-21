@@ -51,11 +51,12 @@ const Show_modal = (show, set_modal, reset_grid, { navigation }, winner) => {
                   colors={['#b0b0b0', '#9c9898', '#808080']} style={styles.button}
                   start={{ x: 0.0, y: 0.25 }} end={{ x: 0.5, y: 1.0 }} key={index}
                 >
-                  <Pressable style={styles.button} onPress={() => {
-                    set_modal(false);
-                    {ele.effect()}
-                  }}
-                    android_ripple={{ color: 'white' }}
+                  <Pressable
+                    style={styles.button}
+                    onPress={() => {
+                      set_modal(false);
+                      { ele.effect() }
+                    }}
                   >
                     <Text style={styles.button_text}>{ele.text}</Text>
                   </Pressable>
@@ -74,18 +75,16 @@ const Show_modal = (show, set_modal, reset_grid, { navigation }, winner) => {
 /////////////////////////////////////////////////////////////////////////////////
 
 const styles = StyleSheet.create({
-  // Aligns children in the centre
   main_container: {
     flex: 1,
+    justifyContent: 'center',
     alignItems: 'center',
-    paddingTop: 120,
-    paddingBottom: 145,
-    backgroundColor: 'rgba(0,0,0,0.2)'
+    backgroundColor: 'rgba(0,0,0,0.2)',
   },
   child_container: {
     flex: 1,
     flexDirection: 'row',
-    alignItems: 'flex-end',
+    marginTop: 20
   },
   button: {
     alignItems: 'center',
@@ -99,7 +98,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 50,
     color: 'white',
-    fontFamily: 'hyope'
+    fontFamily: 'hyope',
+    marginTop: height * 0.17,
+    marginBottom: 20
   },
   button_text: {
     color: 'white',
