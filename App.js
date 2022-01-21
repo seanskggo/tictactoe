@@ -19,6 +19,7 @@ import { Asset } from 'expo-asset';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
 import { rules, circle, cross } from './constants/Images';
+import Onboarding from './src/Onboarding';
 
 /////////////////////////////////////////////////////////////////////////////////
 // Functions
@@ -77,6 +78,7 @@ export default App = () => {
     return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerTransparent: true, headerTintColor: 'blue' }}>
+          <Stack.Screen name="Onboarding" component={Onboarding} options={{ title: '' }} />
           <Stack.Screen name="Home" component={Home} options={{ title: '' }} />
           <Stack.Screen name="Game" component={Game} options={{ title: '' }} />
           <Stack.Screen name="Game_ai" component={Game_ai} options={{ title: '' }} />
