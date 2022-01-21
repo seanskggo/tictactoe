@@ -34,7 +34,7 @@
       },
       "versionCode": 2,
       "permissions": [],
-      "package": "com.hyope.tictactoeai"
+      "package": "dev.quikk.tictactoeai"
     }
   }
 }
