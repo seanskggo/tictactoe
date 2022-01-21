@@ -19,12 +19,18 @@
     "ios": {
       "bundleIdentifier": "com.hyope.tictactoeai",
       "buildNumber": "1.0.0",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-4931537465151831~6801262822"
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
+      },
+      "config": {
+        "googleMobileAdsAppId": "ca-app-pub-4931537465151831~8942202829"
       },
       "versionCode": 1,
       "permissions": [],
