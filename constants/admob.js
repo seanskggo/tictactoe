@@ -17,8 +17,8 @@ import { AdMobBanner } from 'expo-ads-admob';
 
 // DO NOT CHANGE THE CONSTANT BELOW
 const adUnitID = isDevice && !__DEV__ ? Platform.select({
-  ios: 'ca-app-pub-4931537465151831~6801262822',
-  android: 'ca-app-pub-4931537465151831~8942202829',
+  ios: 'ca-app-pub-4931537465151831/3573599722',
+  android: 'ca-app-pub-4931537465151831/1749382166',
 }) : Platform.select({
   ios: 'ca-app-pub-3940256099942544/2934735716',
   android: 'ca-app-pub-3940256099942544/6300978111'
