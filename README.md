@@ -6,7 +6,6 @@ Based on a simple and classic game - Tic Tac Toe.
 
 Created December - January 2021.
 
-
 ## About the app
 
 This app was created using React Native (ES6 Javascript) and Expo from scratch. The app is currently in beta testing phase and is available on Google Play:
@@ -16,11 +15,6 @@ https://play.google.com/store/apps/details?id=dev.quikk.tictactoeai
 Prototype of this project was created using Python3 and PyQt5 and is available in my other repository at:
 
 https://github.com/seanskggo72/tic-tac-toe-AI
-
-## About the Trademark
-
-Quikk is the app's trademark and was created with my long time colleague (A current computer science student at Macquarie University). We are aiming to develop small mobile and web apps to hone our skills while providing free software for the general public. 
-## Design and Dependencies
 
 * Button design
  
