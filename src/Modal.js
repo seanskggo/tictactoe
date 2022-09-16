@@ -10,7 +10,6 @@
 import React from 'react';
 import { StyleSheet, Pressable, Modal, Text, View, Dimensions } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import AdDisplay from '../constants/admob';
 
 /////////////////////////////////////////////////////////////////////////////////
 // Constants
@@ -43,7 +42,6 @@ const Show_modal = (show, set_modal, reset_grid, { navigation }, winner) => {
       >
         <View style={styles.main_container}>
           <Text style={styles.title}>{message}</Text>
-          <AdDisplay />
           <View style={styles.child_container}>
             {button_info.map((ele, index) => {
               return (
@@ -82,9 +80,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'rgba(0,0,0,0.2)',
   },
   child_container: {
-    flex: 1,
-    flexDirection: 'row',
-    marginTop: 20
+    flexDirection: 'row'
   },
   button: {
     alignItems: 'center',
@@ -99,7 +95,6 @@ const styles = StyleSheet.create({
     fontSize: 50,
     color: 'white',
     fontFamily: 'hyope',
-    marginTop: height * 0.17,
     marginBottom: 20
   },
   button_text: {

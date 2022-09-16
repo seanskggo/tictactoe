@@ -8,19 +8,14 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 import 'react-native-gesture-handler';
-import React, { useState } from 'react';
+import React from 'react';
 import Game_screen from './src/Game';
 import Game_screen_ai from './src/Game_ai';
 import HomeScreen from './src/Home';
 import InstructionsScreen from './src/Instructions';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { Asset } from 'expo-asset';
-import AppLoading from 'expo-app-loading';
-import { useFonts } from 'expo-font';
-import { rules, circle, cross } from './constants/Images';
-import Onboarding from './src/Onboarding';
-import { setTestDeviceIDAsync } from 'expo-ads-admob';
+import { useLoadResources } from './hooks/useLoad';
 
 /////////////////////////////////////////////////////////////////////////////////
 // Functions
@@ -53,34 +48,15 @@ const Stack = createStackNavigator();
 // Exports
 /////////////////////////////////////////////////////////////////////////////////
 
-const _cacheResourcesAsync = async () => {
-  await setTestDeviceIDAsync('EMULATOR')
-  const images = [rules, circle, cross]
-  const cacheImages = images.map(image => {
-    return Asset.fromModule(image).downloadAsync();
-  });
-  return Promise.all(cacheImages);
-}
-
-// Rendering windows
 export default App = () => {
-  const [isLoadingComplete, setLoading] = useState(false);
-  let [fontsLoaded] = useFonts({
-    'hyope': require('./assets/fonts/hyope.ttf'),
-  });
-  if (!fontsLoaded && !isLoadingComplete) {
-    return (
-      <AppLoading
-        startAsync={_cacheResourcesAsync}
-        onError={console.warn}
-        onFinish={() => setLoading(true)}
-      />
-    )
-  } else if (fontsLoaded) {
+  const isLoadingComplete = useLoadResources();
+
+  if (!isLoadingComplete) {
+    return null;
+  } else {
     return (
       <NavigationContainer>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Onboarding" component={Onboarding} />
           <Stack.Screen name="Home" component={Home} />
           <Stack.Screen name="Game" component={Game} />
           <Stack.Screen name="Game_ai" component={Game_ai} />
@@ -88,5 +64,5 @@ export default App = () => {
         </Stack.Navigator>
       </NavigationContainer >
     )
-  } else return null;
+  }
 }

@@ -2,7 +2,7 @@
   "expo": {
     "name": "Tic Tac Toe AI",
     "slug": "TicTacToeAI",
-    "version": "2.0.2",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
@@ -13,28 +13,26 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "bundleIdentifier": "com.hyope.tictactoeai",
       "buildNumber": "1.0.0",
-      "supportsTablet": true,
-      "config": {
-        "googleMobileAdsAppId": "ca-app-pub-4931537465151831~6801262822"
-      }
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "config": {
-        "googleMobileAdsAppId": "ca-app-pub-4931537465151831~8942202829"
-      },
-      "versionCode": 4,
+      "versionCode": 8,
       "permissions": [],
       "package": "dev.quikk.tictactoeai"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "3a4e45c7-79fd-4a47-965d-975f76956c01"
+      }
+    },
+    "owner": "seanskggo"
   }
 }

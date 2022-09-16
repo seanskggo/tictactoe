@@ -8,7 +8,7 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 import React from 'react';
-import { Text, View, StyleSheet, Image, Dimensions, Pressable } from 'react-native';
+import { Text, View, StyleSheet, Image, Pressable, Linking } from 'react-native';
 import { Home_background } from './Svg_renderer';
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -32,6 +32,9 @@ const HomeScreen = (navigation) => {
           </Pressable>
           <Pressable style={styles.button_style} onPress={() => navigation.navigate('Instructions')}>
             <Text style={styles.text}>How To Play</Text>
+          </Pressable>
+          <Pressable style={styles.button_style} onPress={() => Linking.openURL('https://privacy.seanskggo.com')}>
+            <Text style={styles.text}>Privacy Policy</Text>
           </Pressable>
         </View>
       </View>
@@ -67,7 +70,7 @@ const styles = StyleSheet.create({
   button_style: {
     borderRadius: 8,
     width: 165,
-    height: 50,
+    height: 40,
     backgroundColor: 'rgba(66, 153, 240, 0.7)',
     justifyContent: 'center',
     alignItems: 'center',
