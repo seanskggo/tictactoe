@@ -4,8 +4,6 @@ Mobile app development project emulating a professionally designed and functioni
 
 Based on a simple and classic game - Tic Tac Toe.
 
-Created December - January 2021.
-
 ## About the app
 
 This app was created using React Native (ES6 Javascript) and Expo from scratch. The app is currently in beta testing phase and is available on Google Play:
