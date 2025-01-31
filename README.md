@@ -1,10 +1,14 @@
-# Tic Tac Toe AI App
+# Tic Tac Toe
+
+Mobile Tic Tac Toe AI
+
+### Description
 
 Mobile app development project emulating a professionally designed and functioning app.
 
 Based on a simple and classic game - Tic Tac Toe.
 
-## About the app
+### About the app
 
 This app was created using React Native (ES6 Javascript) and Expo from scratch. The app is currently in beta testing phase and is available on Google Play:
 
@@ -30,7 +34,7 @@ https://github.com/seanskggo72/tic-tac-toe-AI
  
  ```react-native-game-engine```
 
-## App Implementation
+### App Implementation
 
 Created using functional components and hooks. This app did not require state management. All designs including logo were created using Canva and/or Adobe Photoshop.
 
