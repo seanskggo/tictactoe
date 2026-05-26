@@ -24,10 +24,13 @@ export function EndGameModal({ visible, winner, onClose, onReset }: Props) {
     onReset();
   };
 
-  const buttons = [
-    { text: 'Home', onPress: goHome },
-    { text: 'Reset', onPress: reset },
-  ];
+  const buttons =
+    winner === 'draw'
+      ? [
+          { text: 'Home', onPress: goHome },
+          { text: 'Reset', onPress: reset },
+        ]
+      : [{ text: 'Reset', onPress: reset }];
 
   return (
     <Modal animationType="fade" transparent visible={visible} onRequestClose={goHome}>
