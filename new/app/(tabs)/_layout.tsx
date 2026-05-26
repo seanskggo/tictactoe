@@ -1,5 +1,4 @@
 import { Tabs } from 'expo-router';
-import React from 'react';
 
 import { HapticTab } from '@/components/haptic-tab';
 import { IconSymbol } from '@/components/ui/icon-symbol';
@@ -24,10 +23,26 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="game-ai"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: 'vs AI',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="cpu.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="game"
+        options={{
+          title: 'vs Player',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="person.2.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="instructions"
+        options={{
+          title: 'How to Play',
+          tabBarIcon: ({ color }) => (
+            <IconSymbol size={28} name="questionmark.circle.fill" color={color} />
+          ),
         }}
       />
     </Tabs>
